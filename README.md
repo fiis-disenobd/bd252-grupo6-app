@@ -6,12 +6,12 @@
 
 Bienvenido al repositorio oficial del **Sistema de Gestión de Recursos Humanos**, desarrollado como un entorno completo para gestionar:
 
-* ✔ Requerimientos de personal
-* ✔ Postulaciones
-* ✔ Evaluaciones
-* ✔ Contrataciones
-* ✔ Administración de datos relacionados
-* ✔ Dashboard y módulos asociados
+*  Requerimientos de personal
+* Postulaciones
+*  Evaluaciones
+* Contrataciones
+*  Administración de datos relacionados
+* Dashboard y módulos asociados
 
 El proyecto está dividido en dos partes:
 
@@ -155,8 +155,8 @@ Configuración recomendada:
 | Parámetro | Valor     |
 | --------- | --------- |
 | Usuario   | postgres  |
-| Password  | admin123  |
-| BD        | Aplicando |
+| Password  | 123  |
+| BD        | AplicandoUnido |
 | Host      | localhost |
 | Puerto    | 5432      |
 

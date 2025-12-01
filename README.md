@@ -192,12 +192,6 @@ npm run dev
 
 ---
 
-# 🤝 **Contribuciones**
-
-Pull Requests, mejoras o reportes de errores son bienvenidos.
-Este proyecto está documentado y se puede extender fácilmente.
-
----
 
 # 📄 **Licencia**
 
@@ -206,17 +200,5 @@ Queda prohibida su comercialización sin autorización.
 
 ---
 
-# 🙋‍♂️ **Autor**
 
-**Dilan — Proyecto 4 (RRHH)**
-Desarrollador Backend & Frontend
-
----
-
-Si quieres, puedo hacerte también:
-
-✔ **README en versión Inglesa**
-✔ **Versión con imágenes y capturas del sistema**
-✔ **Badges profesionales (GitHub, Python, Django, Vite, etc.)**
-✔ **README animado con emojis y secciones avanzadas**
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluar Candidatos</title>
+  <link rel="stylesheet" href="css/evaluar_candidatos.css">
+</head>
+<body>
+  <header>
+    <h1>Evaluar Candidatos</h1>
+    <a href="index1.html" class="btn-volver">← Volver al menú principal</a>
+  </header>
+
+  <!-- LISTA DE CANDIDATOS -->
+  <section class="tabla-candidatos">
+    <h2>Lista de Candidatos Postulados</h2>
+    <p id="mensaje-evaluaciones" class="mensaje"></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre Candidato</th>
+          <th>ID Candidato</th>
+          <th>Teléfono</th>
+          <th>Experiencia</th>
+          <th>Proyecto Asociado</th>
+          <th>Puntaje Obtenido</th>
+          <th>Fecha Evaluación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-evaluaciones-body">
+        <!-- Aquí se cargan dinámicamente las filas con JavaScript -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="js/evaluar_candidatos.js"></script>
+</body>
+</html>

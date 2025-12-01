@@ -1,0 +1,204 @@
+/* ------------------ */
+/* ESTILO GENERAL */
+/* ------------------ */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f1f5f9;
+    color: #333;
+}
+
+.layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ------------------ */
+/* SIDEBAR */
+/* ------------------ */
+.sidebar {
+    width: 280px;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0 12px rgba(0,0,0,0.05);
+    animation: slideSidebar 0.4s ease;
+}
+
+@keyframes slideSidebar {
+    from { transform: translateX(-30px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.logo-icon {
+    font-size: 46px;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ------------------ */
+/* MENÚ MÓDULOS */
+/* ------------------ */
+#module-list button {
+    width: 100%;
+    padding: 14px 22px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    transition: 0.25s ease;
+    color: #334155;
+}
+
+#module-list button i,
+#module-list button .icon {
+    width: 22px;
+}
+
+#module-list button:hover {
+    background: #e8efff;
+    color: #1e40af;
+    padding-left: 28px;
+}
+
+#module-list .active {
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    transform: translateX(4px);
+}
+
+/* ------------------ */
+/* FOOTER */
+/* ------------------ */
+.sidebar-footer {
+    margin-top: auto;
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.stat i { margin-right: 8px; }
+
+.stat.blue   { background: #e0edff; color: #1d4ed8; }
+.stat.green  { background: #e4f7ec; color: #15803d; }
+.stat.purple { background: #f2e8ff; color: #6b21a8; }
+
+/* ------------------ */
+/* CONTENIDO */
+/* ------------------ */
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------ */
+/* TARJETAS */
+/* ------------------ */
+.card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 28px;
+    border-radius: 14px;
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 32px rgba(0,0,0,0.12);
+    transform: translateY(-6px);
+}
+
+/* ------------------ */
+/* GRILLAS */
+/* ------------------ */
+.grid {
+    display: grid;
+    gap: 22px;
+}
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* ------------------ */
+/* ICON BOX */
+/* ------------------ */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-size: 32px;
+    background: #f1f5f9;
+    color: #2563eb;
+}
+
+/* ------------------ */
+/* BOTÓN VOLVER */
+/* ------------------ */
+.btn-back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2563eb;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-back:hover {
+    transform: translateX(-4px);
+    color: #1e3a8a;
+}
+
+
+
+.sidebar-logo {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+}

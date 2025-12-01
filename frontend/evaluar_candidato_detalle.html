@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluar Candidato</title>
+  <link rel="stylesheet" href="css/evaluar_candidato_detalle.css">
+</head>
+<body>
+  <header>
+    <h1>Evaluación de Candidato</h1>
+    <a href="evaluar_candidatos.html" class="btn-volver">← Volver a lista</a>
+  </header>
+
+  <main class="contenedor">
+    <!-- INFORMACIÓN DEL CANDIDATO -->
+    <section class="info-candidato">
+      <h2>Información del Candidato</h2>
+      <div class="info-grid">
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+        <p><strong>Experiencia:</strong> <span id="experiencia"></span> años</p>
+        <p><strong>Proyecto Asociado:</strong> <span id="proyecto"></span></p>
+      </div>
+    </section>
+
+    <!-- MATRIZ DE EVALUACIÓN -->
+    <section class="evaluacion">
+      <h2>Matriz de Evaluación</h2>
+      <form id="form-evaluacion">
+        <div class="fila-evaluacion">
+            <label for="Hard_skills">Hard Skills</label>
+            <input type="number" id="Hard_skills" min="1" max="5" required>
+        </div>
+
+        <div class="fila-evaluacion">
+            <label for="Soft_skills">Soft Skills</label>
+            <input type="number" id="Soft_skills" min="1" max="5" required>
+        </div>
+
+        <div class="fila-evaluacion">
+            <label for="Experiencia">Experiencia</label>
+            <input type="number" id="Experiencia" min="1" max="5" required>
+        </div>
+
+        <div class="fila-evaluacion">
+            <label for="Etica_integridad">Ética e Integridad Profesional</label>
+            <input type="number" id="Etica_integridad" min="1" max="5" required>
+        </div>   
+
+        <div class="fila-evaluacion">
+            <label for="Evaluacion_economica">Evaluación Económica</label>
+            <input type="number" id="Evaluacion_economica" min="1" max="5" required>
+        </div>
+        
+
+        <div class="fila-evaluacion">
+          <label>Puntaje Promedio:</label>
+          <span id="puntaje-promedio">0.00</span>
+        </div>
+
+        <div class="fila-evaluacion">
+           <label for="Observaciones">Observaciones</label>
+           <textarea id="Observaciones" rows="3" placeholder="Comentarios o notas"></textarea>
+        </div>
+
+        <div class="botones">
+          <button type="submit" class="btn-registrar">Registrar Evaluación</button>
+          <button type="button" class="btn-cancelar" onclick="window.location.href='evaluar_candidatos.html'">Cancelar</button>
+        </div>
+
+        <p id="mensaje" class="mensaje"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/evaluar_candidato_detalle.js"></script>
+</body>
+</html>

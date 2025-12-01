@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Cliente</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="css/form_cliente.css">
+
+</head>
+<body>
+
+<div class="container form-container">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Registrar Nuevo Cliente</h4>
+        </div>
+        <div class="card-body">
+            <form id="formCliente">
+
+                <div class="mb-3">
+                    <label class="form-label">ID Cliente</label>
+                    <input type="text" id="id_cliente" class="form-control" placeholder="Ej: C0099" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Nombre Empresa</label>
+                    <input type="text" id="nombre_cliente" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Tipo</label>
+                    <select id="tipo_cliente" class="form-select">
+                        <option value="Corporativo">Corporativo</option>
+                        <option value="Pyme">Pyme</option>
+                        <option value="Estatal">Estatal</option>
+                        <option value="Consultoría">Consultoría</option>
+                        <option value="Comercial">Comercial</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label class="form-label">Nombre Contacto</label>
+                        <input type="text" id="contacto_cliente" class="form-control">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">Teléfono</label>
+                        <input type="text" id="telefono_cliente" class="form-control">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Correo</label>
+                    <input type="email" id="correo_cliente" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Dirección</label>
+                    <input type="text" id="direccion_cliente" class="form-control">
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success">Guardar Cliente</button>
+                    <a href="clientes.html" class="btn btn-secondary">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- JS EXTERNO -->
+<script src="js/form_cliente.js"></script>
+
+</body>
+</html>

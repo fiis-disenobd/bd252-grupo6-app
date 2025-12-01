@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Requerimiento</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>Registro de Requerimiento de Personal</h1>
+  </header>
+
+  <div class="volver-container">
+    <button id="btnVolverInicio" class="btn btn-cancel">
+      🏠 Volver al Inicio
+    </button>
+  </div>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Formulario de Registro</h2>
+      <form id="form-requerimiento" class="formulario">
+
+        <div class="form-group">
+          <label for="tipo_personal"><i class="fa-solid fa-user-tie"></i> Tipo de Personal:</label>
+          <select id="tipo_personal" name="tipo_personal" required>
+            <option value="">Seleccione...</option>
+            <option value="Consultor Externo">Consultor Externo</option>
+            <option value="Auditor Externo">Auditor Externo</option>
+            <option value="Personal Interno">Personal Interno</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modalidad_trabajo"><i class="fa-solid fa-building"></i> Modalidad de Trabajo:</label>
+          <select id="modalidad_trabajo" name="modalidad_trabajo" required>
+            <option value="">Seleccione...</option>
+            <option value="Remoto">Remoto</option>
+            <option value="Presencial">Presencial</option>
+            <option value="Híbrido">Híbrido</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="experiencia_requerida"><i class="fa-solid fa-hourglass-half"></i> Experiencia Requerida (años):</label>
+          <input type="number" id="experiencia_requerida" name="experiencia_requerida" min="0" max="50" required>
+        </div>
+
+        <div class="form-group">
+          <label for="puesto"><i class="fa-solid fa-briefcase"></i> Puesto:</label>
+          <input type="text" id="puesto" name="puesto" maxlength="50" required>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_solicitud"><i class="fa-solid fa-calendar-days"></i> Fecha de Solicitud:</label>
+          <input type="date" id="fecha_solicitud" name="fecha_solicitud" required>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn">Registrar Requerimiento</button>
+        </div>
+      </form>
+
+      <div id="mensaje" class="mensaje"></div>
+    </section>
+  </main>
+
+  <script src="js/requerimiento.js"></script>
+</body>
+</html>

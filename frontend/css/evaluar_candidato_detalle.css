@@ -1,0 +1,274 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.btn-volver {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  background-color: #ffffff33;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #ffffff55;
+}
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* ======== SECCIÓN DE INFORMACIÓN ======== */
+.info-candidato {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.info-candidato h2 {
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.info-candidato p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.info-candidato strong {
+  color: #222;
+}
+
+/* ======== FORMULARIO DE EVALUACIÓN ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #004aad;
+}
+
+input[type="number"],
+textarea,
+select {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #004aad;
+  box-shadow: 0 0 4px rgba(0, 74, 173, 0.3);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ======== BOTONES ======== */
+.btn-guardar {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-guardar:hover {
+  background-color: #00398a;
+  transform: scale(1.02);
+}
+
+.btn-cancelar {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancelar:hover {
+  background-color: #b0b0b0;
+}
+
+/* ======== MENSAJE ======== */
+#mensaje {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mensaje.success {
+  color: green;
+}
+
+#mensaje.error {
+  color: red;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-volver {
+    font-size: 0.9rem;
+  }
+}
+
+/* ======== MATRIZ DE EVALUACIÓN ======== */
+.evaluacion {
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.evaluacion h2 {
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.fila-evaluacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.fila-evaluacion label {
+  flex: 1;
+  min-width: 220px;
+  font-weight: 600;
+  color: #333;
+}
+
+.fila-evaluacion input[type="number"] {
+  width: 100px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.fila-evaluacion input[type="number"]:focus {
+  border-color: #004aad;
+}
+
+.fila-evaluacion textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#puntaje-promedio {
+  font-weight: bold;
+  color: #004aad;
+  font-size: 1.2rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-registrar {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-registrar:hover {
+  background-color: #00398a;
+  transform: scale(1.02);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 600px) {
+  .fila-evaluacion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fila-evaluacion input[type="number"] {
+    width: 100%;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+}

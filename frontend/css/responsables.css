@@ -1,0 +1,120 @@
+:root {
+    --bg-body: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-color: #212529;
+    --sidebar-bg: #ffffff;
+    --border-color: #dee2e6;
+    --table-head-bg: #f8f9fa;
+    --table-row-bg: #ffffff;
+}
+
+.dark-mode {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-color: #e0e0e0;
+    --sidebar-bg: #1e1e1e;
+    --border-color: #333;
+    --table-head-bg: #2c2c2c;
+    --table-row-bg: #1e1e1e;
+}
+
+/* GENERAL */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    transition: 0.3s;
+}
+
+/* SIDEBAR */
+.sidebar {
+    min-height: 100vh;
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.sidebar a.active {
+    background-color: rgba(13, 110, 253, 0.15);
+    border-right: 3px solid #0d6efd;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+/* TABLAS */
+.table-custom th {
+    background-color: var(--table-head-bg) !important;
+    color: var(--text-color);
+}
+
+.table-custom td {
+    background-color: var(--table-row-bg) !important;
+    color: var(--text-color);
+}
+
+/* BADGES DISPONIBILIDAD */
+.badge-disp {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.disp-completo {
+    background-color: #d1e7dd;
+    color: #198754;
+}
+
+.disp-medio {
+    background-color: #fff3cd;
+    color: #9a6e04;
+}
+
+.disp-otro {
+    background-color: #cff4fc;
+    color: #0d6efd;
+}
+
+/* FILTRO */
+.filter-select {
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+/* TOGGLE TEMA */
+.theme-toggle {
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}

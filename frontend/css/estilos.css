@@ -1,0 +1,225 @@
+/* ------------------------------------------------ */
+/* ESTILO GENERAL (MISMO ESTILO QUE index1.css)     */
+/* ------------------------------------------------ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f1f5f9;
+    color: #333;
+}
+
+/* ------------------------------------------------ */
+/* CONTENEDOR PRINCIPAL DE FORMULARIOS             */
+/* ------------------------------------------------ */
+.container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 18px 28px rgba(0,0,0,0.08);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------------------------ */
+/* TÍTULOS                                          */
+/* ------------------------------------------------ */
+h1, h2, h3 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* ------------------------------------------------ */
+/* FORMULARIO                                       */
+/* ------------------------------------------------ */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 600;
+    color: #475569;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+label i {
+    color: #2563eb;
+    margin-right: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    transition: 0.2s ease;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .2);
+}
+
+/* ------------------------------------------------ */
+/* BOTONES PRINCIPALES                               */
+/* ------------------------------------------------ */
+button.btn,
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+button.btn:hover,
+.btn:hover {
+    background: #1e40af;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+}
+
+/* Variantes de botones */
+.btn.secundario {
+    background: #16a34a;
+}
+.btn.secundario:hover {
+    background: #15803d;
+}
+
+.btn.terciario {
+    background: #f59e0b;
+}
+.btn.terciario:hover {
+    background: #d97706;
+}
+
+/* ------------------------------------------------ */
+/* MENSAJE DE CONFIRMACIÓN                          */
+/* ------------------------------------------------ */
+.mensaje {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #e0edff;
+    color: #1d4ed8;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+/* HEADER (MISMO ESTILO LIMPIO QUE index1.css)      */
+/* ------------------------------------------------ */
+header {
+    background: #ffffff;
+    padding: 20px;
+    text-align: center;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* LOGO */
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* ------------------------------------------------ */
+/* NAVBAR                                            */
+/* ------------------------------------------------ */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+}
+
+nav a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #334155;
+    transition: 0.25s ease;
+}
+
+nav a:hover,
+nav a.activo {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* ------------------------------------------------ */
+/* SECCIÓN INTRO                                     */
+/* ------------------------------------------------ */
+.intro {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    color: #1e293b;
+}
+.intro p {
+    color: #475569;
+}
+
+/* ------------------------------------------------ */
+/* BOTÓN VOLVER                                      */
+/* ------------------------------------------------ */
+.volver-container {
+    text-align: right;
+    margin: 15px 40px;
+}
+
+.btn-cancel {
+    background: #dc3545 !important;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-cancel:hover {
+    background: #b52a38 !important;
+}
+
+/* ------------------------------------------------ */
+/* FOOTER                                            */
+/* ------------------------------------------------ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    color: #667085;
+    margin-top: 50px;
+}
+
+
+
+
+

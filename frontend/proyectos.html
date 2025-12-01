@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proyectos</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/proyectos.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark" style="background:#003366; padding: 12px 20px;">
+    <button onclick="window.location.href='index1.html'" 
+        class="btn btn-light btn-sm">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+
+    <h4 class="text-white m-0">
+        <i class="fas fa-users"></i> Gestión de Proyectos
+    </h4>
+
+    <div class="theme-toggle text-white" onclick="toggleTheme()" style="cursor:pointer;">
+        <i class="fas fa-moon" id="theme-icon"></i> 
+        <span id="theme-text">Modo Oscuro</span>
+    </div>
+</nav>
+
+<div class="main-content">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h3 class="fw-bold">Proyectos</h3>
+            <p class="text-muted">Listado y gestión de proyectos activos</p>
+        </div>
+        <a href="form_proyecto.html" class="btn btn-primary btn-sm">
+            <i class="fas fa-plus"></i> Nuevo Proyecto
+        </a>
+    </div>
+
+    <!-- Filtro de estado -->
+    <div class="mb-3">
+        <select id="filtroEstado" class="form-select filter-select" onchange="filtrarProyectos()">
+            <option value="todos">Todos los estados</option>
+            <option value="en curso">En curso</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="cerrado">Cerrado</option>
+        </select>
+    </div>
+
+    <!-- TABLA -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover table-custom" id="tablaProyectos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Proyecto</th>
+                        <th>Cliente</th>
+                        <th>Estado</th>
+                        <th>Prioridad</th>
+                        <th>Fechas</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-body">
+                    <tr>
+                        <td colspan="6" class="text-center py-4">
+                            <div class="spinner-border text-primary"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/proyectos.js"></script>
+
+</body>
+</html>

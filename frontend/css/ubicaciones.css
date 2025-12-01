@@ -1,0 +1,234 @@
+/* ==========================================================
+   ESTILOS GENERALES
+   ========================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+.page-container {
+    width: 95%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 25px 0;
+}
+
+/* ==========================================================
+   CABECERA
+   ========================================================== */
+.header h1 {
+    font-size: 32px;
+    margin: 0;
+    color: #1e3a8a;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* ==========================================================
+   CARD BASE
+   ========================================================== */
+.card {
+    background: #fff;
+    padding: 18px 22px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+/* ==========================================================
+   FILTROS
+   ========================================================== */
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.filtros label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.filtros input,
+.filtros select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    transition: 0.2s;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+    border-color: #3b82f6;
+    background: #fff;
+}
+
+/* ==========================================================
+   ESTADÍSTICAS
+   ========================================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    padding: 18px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.stat-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Colores */
+#stat-total-box { background: linear-gradient(135deg,#4f46e5,#6366f1); color: white; }
+#stat-libres-box { background: linear-gradient(135deg,#10b981,#34d399); color: white; }
+#stat-ocupadas-box { background: linear-gradient(135deg,#facc15,#fbbf24); color: white; }
+#stat-bloqueadas-box { background: linear-gradient(135deg,#ef4444,#dc2626); color: white; }
+
+.stat-box p { margin: 0; font-size: 14px; opacity: 0.9; }
+.stat-box h3 { margin-top: 8px; font-size: 26px; }
+
+/* ==========================================================
+   GRID DE UBICACIONES
+   ========================================================== */
+.ubicaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+/* ==========================================================
+   CARD DE UBICACIÓN
+   ========================================================== */
+.ubicacion-card {
+    background: white;
+    padding: 18px 18px 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+    border-left: 6px solid #3b82f6;
+}
+
+.ubicacion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Header card */
+.ubi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ubi-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.ubi-sub {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ==========================================================
+   BADGES
+   ========================================================== */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-libre { background: #10b981; }
+.badge-ocupado { background: #f59e0b; }
+.badge-bloqueado { background: #ef4444; }
+
+/* ==========================================================
+   BOTÓN VER INVENTARIO
+   ========================================================== */
+.btn-ver {
+    margin-top: 12px;
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-ver:hover {
+    background: #1d4ed8;
+}
+
+/* ==========================================================
+   INVENTARIO (tabla)
+   ========================================================== */
+.inventario-box {
+    margin-top: 15px;
+}
+
+.tabla-inventario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.tabla-inventario thead {
+    background: #e2e8f0;
+}
+
+.tabla-inventario th,
+.tabla-inventario td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-inventario tr:hover {
+    background: #f1f5f9;
+}
+
+/* ==========================================================
+   BARRA DE OCUPACIÓN
+   ========================================================== */
+.barra-container {
+    width: 100%;
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.barra-ocupacion {
+    height: 10px;
+}
+
+.barra-verde { background: #10b981; }
+.barra-amarilla { background: #fbbf24; }
+.barra-roja { background: #ef4444; }

@@ -1,0 +1,197 @@
+/* ==========================================================
+   PALETA PROFESIONAL
+   ========================================================== */
+/*
+ Azul primario     #1a73e8
+ Azul oscuro       #0d47a1
+ Gris fondo        #f4f6f9
+ Gris tarjeta      #ffffff
+ Gris texto        #2d3436
+ Verde OK          #2ecc71
+ Amarillo alerta   #f1c40f
+ Rojo error        #e74c3c
+*/
+
+
+/* ==========================================================
+   GENERAL
+   ========================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #2d3436;
+}
+
+h3, h4 {
+    margin: 0;
+    font-weight: 600;
+    color: #0d47a1;
+}
+
+/* Animación suave */
+* {
+    transition: all .15s ease;
+}
+
+
+/* ==========================================================
+   TARJETA DE RECEPCIÓN
+   ========================================================== */
+.recepcion-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    margin: 20px auto;
+    width: 92%;
+    max-width: 620px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    border-left: 6px solid #1a73e8;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recepcion-card:hover {
+    box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+    transform: translateY(-3px);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+.card-info p {
+    margin: 3px 0;
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================================
+   BOTONES
+   ========================================================== */
+button,
+.btn,
+.btn-ver-detalles {
+    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+button:hover,
+.btn:hover,
+.btn-ver-detalles:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.20);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* Botón verde */
+.sugerencia-box button {
+    background: linear-gradient(135deg, #2ecc71, #239b56);
+    box-shadow: 0 3px 8px rgba(46, 204, 113, 0.4);
+}
+.sugerencia-box button:hover {
+    background: linear-gradient(135deg, #27ae60, #1e8449);
+}
+
+
+/* ==========================================================
+   PANEL DE DETALLES
+   ========================================================== */
+.det-panel {
+    margin-top: 15px;
+    padding: 15px;
+    background: #eef3ff;
+    border-radius: 12px;
+    border-left: 4px solid #1a73e8;
+}
+
+
+/* ==========================================================
+   DETALLE DE PRODUCTO
+   ========================================================== */
+.detalle {
+    background: #ffffff;
+    padding: 18px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border-left: 5px solid #1a73e8;
+
+    animation: fadeIn .2s ease-in-out;
+}
+
+.detalle h4 {
+    font-size: 1.15rem;
+    color: #1a73e8;
+    margin-bottom: 8px;
+}
+
+.detalle input[type="number"] {
+    width: 85px;
+    padding: 7px;
+    border-radius: 8px;
+    border: 1px solid #c5c5c5;
+    margin-top: 6px;
+
+    font-size: 1rem;
+}
+
+
+/* ==========================================================
+   SUGERENCIAS DE UBICACIONES
+   ========================================================== */
+.sugerencia-box {
+    background: #ffffff;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+
+    border-left: 5px solid #2ecc71;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sugerencia-box p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Estado ubicado */
+.ubicado-msg {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* ==========================================================
+   ANIMACIONES
+   ========================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+

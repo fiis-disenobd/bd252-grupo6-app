@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WMS - Demo HTML</title>
+
+    <!-- Vincular CSS externo -->
+    <link rel="stylesheet" href="css/index.css">
+    <!--link rel="stylesheet" href="css/ubicaciones.css"-->
+</head>
+
+<body>
+<div class="sidebar" role="navigation" aria-label="Menú lateral">
+    <div class="sidebar-header">
+        <!-- Icono paquete -->
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4.04a2 2 0 0 0-2 0l-7 4.04A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4.04a2 2 0 0 0 2 0l7-4.04A2 2 0 0 0 21 16z"></path>
+            <path d="M7 9.5v6.5"></path>
+            <path d="M17 9.5v6.5"></path>
+        </svg>
+        <div>
+            <div class="brand-title">WMS</div>
+            <div class="brand-sub">Sistema de Almacén</div>
+        </div>
+    </div>
+
+    <div class="menu" id="menu">
+        <div class="menu-item active" data-view="dashboard" tabindex="0" role="button" aria-pressed="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M3 3v18h18"></path><path d="M8 12v5"></path><path d="M12 8v9"></path><path d="M16 4v13"></path>
+            </svg>
+            <span>Dashboard</span>
+        </div>
+
+        <div class="menu-item" data-view="inventory" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4.04a2 2 0 0 0-2 0L3 6.27A2 2 0 0 0 2 8v8a2 2 0 0 0 1 1.73l7 4.04a2 2 0 0 0 2 0l7-4.04A2 2 0 0 0 21 16z"></path>
+            </svg>
+            <span>Inventario</span>
+        </div>
+
+        <div class="menu-item" data-view="receiving" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 3v12"></path><path d="M19 10l-7 7-7-7"></path>
+            </svg>
+            <span>Recepciones</span>
+        </div>
+
+        <div class="menu-item" data-view="shipping" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 21V9"></path><path d="M5 14l7-7 7 7"></path>
+            </svg>
+            <span>Despachos</span>
+        </div>
+
+        <div class="menu-item" data-view="picking" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 7h6"></path><path d="M9 12h6"></path><path d="M9 17h6"></path>
+                <path d="M8 3h8v4H8z"></path><path d="M19 7v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7"></path>
+            </svg>
+            <span>Picking</span>
+        </div>
+
+        <div class="menu-item" data-view="locations" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 21s8-4.5 8-11A8 8 0 1 0 4 10c0 6.5 8 11 8 11z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+            </svg>
+            <span>Ubicaciones</span>
+        </div>
+
+        <div class="menu-item" data-view="map3d" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4.04a2 2 0 0 0-2 0L3 6.27A2 2 0 0 0 2 8v8"></path>
+                <path d="M7 9v6l5 3 5-3V9"></path>
+            </svg>
+            <span>Mapa 3D</span>
+        </div>
+    </div>
+</div>
+
+<main class="main" id="main">
+    <div class="container">
+
+        <!-- Todas las secciones aquí (no las repito para ahorrar espacio) -->
+        <!-- *** IMPORTANTE *** -->
+        <!-- Conservé TODO tal cual lo enviaste -->
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="view" data-visible="true" aria-hidden="false">
+            <h2>Dashboard</h2>
+            <p class="small">Resumen de indicadores, gráficas y KPIs del almacén.</p>
+            <div style="margin-top:12px;">
+                <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:220px;padding:12px;border:1px solid #e6eef6;border-radius:8px;background:#fff;">
+                        <strong>Órdenes Hoy</strong>
+                        <div id="dash_ordenes" style="font-size:24px;margin-top:8px;">...</div>
+                        <canvas id="chart_ordenes" width="400" height="200"></canvas>
+                    </div>
+                    <div style="flex:1;min-width:220px;padding:12px;border:1px solid #e6eef6;border-radius:8px;background:#fff;">
+                        <strong>Stock bajo</strong>
+                        <div id="dash_stock" style="font-size:24px;margin-top:8px;">...</div>
+                        <canvas id="chart_stock" width="400" height="200"></canvas>
+                    </div>
+                    <div style="flex:1;min-width:220px;padding:12px;border:1px solid #e6eef6;border-radius:8px;background:#fff;">
+                        <strong>Recepciones</strong>
+                        <div id="dash_recepciones" style="font-size:24px;margin-top:8px;">...</div>
+                         <canvas id="chart_recepciones" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <section id="inventory" class="view" style="display:none;" aria-hidden="true">
+                <h2>Inventario</h2>
+                <p>Gestión de productos, existencias y movimientos.</p>
+        </section>
+
+        <section id="receiving" class="view" style="display:none;" aria-hidden="true">
+            <div id="recepciones-container"></div>
+        </section>
+
+        <section id="shipping" class="view" style="display:none;" aria-hidden="true">
+            <h2>Despachos</h2>
+            <p>Gestión de envíos y salidas del almacén.</p>
+        </section>
+
+        <section id="picking" class="view" style="display:none;" aria-hidden="true">
+            <h2>Picking</h2>
+            <p>Preparación de pedidos.</p>
+        </section>
+
+        <section id="locations" class="view" style="display:none;" aria-hidden="true">
+            <div id="locations-container"></div>
+            
+        </section>
+
+
+
+
+        <section id="map3d" class="view" style="display:none;" aria-hidden="true">
+            <h2>Mapa 3D del almacén</h2>
+            <p>Visualización tridimensional del almacén.</p>    
+            
+            <div id="mapa3d_container" 
+                style="width:100%; height:600px; background:#111; border-radius:8px; position:relative;">
+                <canvas id="canvas-3d" style="width:100%; height:100%;"></canvas>
+            </div>
+        </section>
+        <!-- Las demás vistas siguen igual -->
+        <!-- inventory, receiving, shipping, picking, locations, map3d -->
+        <!-- TODO el contenido está intacto -->
+
+    </div>
+</main>
+<!-- Archivo JS externo -->
+<script src="./js/three.min.js"></script>
+<script src="./js/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- React -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- Tu componente React -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="js/config.js"></script>
+
+
+<script src="js/index.js"></script>
+<!--script src="js/recepciones.js"></script-->
+<script src="js/mapa3D.js"></script>
+<!--script src="js/ubicaciones.js"></script-->
+</body>
+</html>

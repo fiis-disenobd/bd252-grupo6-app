@@ -1,38 +1,36 @@
 
 
-# 📘 **Sistema de Gestión de Recursos Humanos (RRHH)**
+# **Sistema de Gestión de Recursos Humanos (RRHH)**
 
-### **Django Backend + Frontend Moderno | Instalación Automática**
+### **Django Backend y Frontend**
 
-Bienvenido al repositorio oficial del **Sistema de Gestión de Recursos Humanos**, desarrollado como un entorno completo para gestionar:
+**Sistema de Gestión de VISIONA**, hemos desarrollado una aplciacion con un entorno completo para gestionar:
 
-*  Requerimientos de personal
-* Postulaciones
-*  Evaluaciones
-* Contrataciones
-*  Administración de datos relacionados
-* Dashboard y módulos asociados
+* Gestion de Contratacion de Personal 
+* Gestion de Proyecto
+* Gestion de Servicios
+* CRM
 
 El proyecto está dividido en dos partes:
 
-* **Backend (Django + PostgreSQL)**
-* **Frontend (HTML / CSS / JS / Vite)**
+* **Backend : Este se realizo en Django y Postgre SQL**
+* **Frontend HTML , CSS , JS y Vite**
 
-Incluye scripts de instalación automática para que cualquier persona pueda ejecutar el sistema *sin conocimientos técnicos*.
+Incluye archivos bat para  instalación automática para que cualquier persona pueda ejecutar el sistema .
 
 ---
 
-# 🚀 **Características Principales**
+#  **Características Principales**
 
-### 🖥 **Backend – Django**
+###  **Backend – Django**
 
-* API REST construida sin ORM (queries SQL puras).
-* Arquitectura organizada por módulos.
-* Autoconexión a PostgreSQL.
+* API REST construida sin ORM es decir SQL puro.
+* La arquitectura esa organizada por módulos.
+* Conexión a PostgreSQL.
 * Scripts automáticos de instalación y despliegue.
 * Endpoints limpios y estructurados para consumir desde el frontend.
 
-### 🎨 **Frontend**
+###  **Frontend**
 
 * Interfaz moderna y modular.
 * HTML, CSS y JavaScript.
@@ -40,16 +38,15 @@ Incluye scripts de instalación automática para que cualquier persona pueda eje
 * Compatible con cualquier navegador moderno.
 * Estilos limpios y optimizados.
 
-### ⚙️ **Scripts Automáticos**
+###  **Scripts Automáticos**
 
 Incluye:
 
 ```
-backend/setup_backend.bat
-frontend/setup_frontend.bat
+setup_proyecto.bat
 ```
 
-Los cuales realizan:
+Realiza:
 
 * Creación de entorno virtual
 * Instalación de dependencias
@@ -62,7 +59,7 @@ Sin necesidad de usar consola.
 
 ---
 
-# 📂 **Estructura del Proyecto**
+#  **Estructura del Proyecto**
 
 ```
 Proyecto-4/
@@ -75,23 +72,26 @@ Proyecto-4/
 │   └── setup_backend.bat
 │
 ├── frontend/
-│   ├── src/                # Código del frontend
+│          
 │   ├── index.html
 │   ├── package.json
 │   └── setup_frontend.bat
 │
 └── README.md
+└──setup_proyecto.bat
 ```
 
 ---
 
-# 🧩 **Instalación — Modo Fácil (100% Automática)**
+#  **Instalación**
 
-Este proyecto puede levantarse con **2 dobles clics**, sin saber programación.
+El proyecto se levante solo ,solo haciendo click en setup_proyecto
+ante de eso implementar el archivo sql que se encuentra en database 
+para que tenga toda la informacion necesaria.
 
 ---
 
-## 1️⃣ **Levantar Backend (Django)**
+## **Levantar Aplicativo**
 
 1. Descargar el proyecto (`Code → Download ZIP`)
 2. Descomprimir
@@ -114,13 +114,13 @@ Este script:
 * Aplica migraciones
 * Levanta el servidor
 
-### ✔ El backend quedará ejecutándose en:
+###  El backend quedará ejecutándose en:
 
-👉 **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
+ **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
 ---
 
-## 2️⃣ **Levantar Frontend**
+##  **Levantar Frontend**
 
 1. Entrar a:
 
@@ -136,17 +136,17 @@ setup_frontend.bat
 
 Este script:
 
-* Instala Node (si no existe)
+* Instala Node 
 * Instala dependencias del proyecto
 * Levanta automáticamente Vite
 
-### ✔ El frontend quedará ejecutándose en:
+###  El frontend quedará ejecutándose en:
 
-👉 **[http://127.0.0.1:5173/](http://127.0.0.1:5173/)**
+ **[http://127.0.0.1:5173/](http://127.0.0.1:5173/)**
 
 ---
 
-# 🗃 **Configuración de Base de Datos**
+#  **Configuración de Base de Datos**
 
 El proyecto usa **PostgreSQL**.
 
@@ -155,7 +155,7 @@ Configuración recomendada:
 | Parámetro | Valor     |
 | --------- | --------- |
 | Usuario   | postgres  |
-| Password  | 123  |
+| Password  | 123  |  *Poner contraseña adecuada*
 | BD        | AplicandoUnido |
 | Host      | localhost |
 | Puerto    | 5432      |
@@ -169,7 +169,7 @@ backend/backend/settings.py
 
 ---
 
-# 🛠 **Modo Manual (Opcional)**
+#  **En modo manual**
 
 ### Backend
 
@@ -193,7 +193,7 @@ npm run dev
 ---
 
 
-# 📄 **Licencia**
+#  **Licencia**
 
 Este proyecto es de libre uso académico.
 Queda prohibida su comercialización sin autorización.
